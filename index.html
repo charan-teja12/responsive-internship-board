@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible responsive internship listing board for students.">
+  <title>Internship Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Internship Board home">Internship<span>Board</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#internships">Internships</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">STUDENT CAREER PLATFORM</p>
+        <h1 id="page-title">Find your next internship.</h1>
+        <p class="hero-text">Explore student-friendly opportunities and filter them by role, location, and work mode.</p>
+
+        <form class="search-panel" id="searchForm" role="search">
+          <div class="field">
+            <label for="keyword">Search internships</label>
+            <input id="keyword" name="keyword" type="search" placeholder="e.g. Java, AI, Web Development">
+          </div>
+
+          <div class="field">
+            <label for="location">Location</label>
+            <select id="location" name="location">
+              <option value="all">All locations</option>
+              <option value="Remote">Remote</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Pune">Pune</option>
+              <option value="Chennai">Chennai</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="mode">Work mode</label>
+            <select id="mode" name="mode">
+              <option value="all">All modes</option>
+              <option value="Remote">Remote</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="On-site">On-site</option>
+            </select>
+          </div>
+
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="listing-section" id="internships" aria-labelledby="listing-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">OPPORTUNITIES</p>
+            <h2 id="listing-title">Latest internships</h2>
+          </div>
+          <p id="resultCount" class="result-count" aria-live="polite"></p>
+        </div>
+
+        <div id="internshipList" class="internship-grid"></div>
+        <p id="emptyState" class="empty-state" hidden>No internships match your search. Try different filters.</p>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">Built for students</h2>
+        <p>Simple, accessible, and responsive internship discovery without any framework.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Internship Board. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
